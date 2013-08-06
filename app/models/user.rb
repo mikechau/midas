@@ -7,12 +7,13 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 
-  attr_accessible :role_ids, :as => :admin
+  attr_accessible :role_ids, :name, :email, :password, :password_confirmation, :as => :admin
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
 
   validates_presence_of :name
+
   before_create :assign_role
 
 private
