@@ -1,5 +1,5 @@
 <h3>Users</h3>
-<div class="span8">
+<div class="span12">
 <table class="table table-condensed">
     <thead>
       <tr>
@@ -22,7 +22,7 @@
         <td><%= user.email %></td>
         <td><%= user.created_at.to_date %></td>
         <td><%= user.tier.name %></td>
-        <td><%= user.has_role?(:admin) ? "Yes" : "No" %></td>
+          <td><%= user.has_role?(:admin) ? "Yes" : "No" %></td>
         <td><%= user.daily_limit %></td>
         <td><%= user.tier.limit %></td>
         <td>
