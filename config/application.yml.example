@@ -1,0 +1,6 @@
+# Add application configuration variables here, as shown below.
+#
+
+SECRET_TOKEN: 'tokenhere'
+GMAIL_USERNAME: email@example.com
+GMAIL_PASSWORD: password
