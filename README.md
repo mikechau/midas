@@ -1,4 +1,4 @@
-# Tyche  
+# MIDAS
 User authorization and analytics tool for Scalp Trade.  
 
 ## Getting Started  
