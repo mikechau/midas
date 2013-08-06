@@ -6,8 +6,10 @@
           <th>Username</th>
           <th>Email</th>
           <th>Registered</th>
-          <th>Role</th>
+          <th>Tier</th>
           <th>Admin</th>
+          <th>Current Usage</th>
+          <th>Usage Limit</th>
           <th></th>
           <th></th>
           <th></th>
@@ -19,8 +21,10 @@
         <td><%= link_to user.name, user %></td>
         <td><%= user.email %></td>
         <td><%= user.created_at.to_date %></td>
-        <td><%= user.roles.first.name.titleize unless user.roles.first.nil? %></td>
+        <td><%= user.tier.name %></td>
         <td><%= user.has_role?(:admin) ? "Yes" : "No" %></td>
+        <td><%= user.daily_limit %></td>
+        <td><%= user.tier.limit %></td>
         <td>
           <a data-toggle="modal" href="#edit-user-<%= user.id %>" class="btn btn-mini" type="button">Edit user</a>
           <%= render user %>

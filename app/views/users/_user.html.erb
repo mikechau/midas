@@ -9,6 +9,8 @@
       <%= f.input :email %>
       <%= f.input :password %>
       <%= f.input :password_confirmation %>
+      <%= f.input :tier_id, :collection => Tier.all, :label_method => lambda {|t| t.name.titleize}, :label => "Tier" %>
+      <%= f.input :daily_limit %>
       <%= f.input :role_ids, :collection => Role.all, :as => :check_boxes, :label_method => lambda {|t| t.name.titleize}, :label => "Role", :item_wrapper_class => 'inline', checked: user.role_ids %>
     </div>
     <div class="modal-footer">

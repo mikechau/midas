@@ -37,3 +37,5 @@ Tier.create!({
               name: "No Access",
               limit: 0
             })
+
+puts "Remember to change your admin password!"
