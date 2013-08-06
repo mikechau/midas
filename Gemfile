@@ -13,19 +13,6 @@ group :development do
   gem 'binding_of_caller', '>= 0.6.8'
 end
 
-group :development, :test do
-  gem 'rspec-rails', '>= 2.11.4'
-  gem 'factory_girl_rails', '>= 4.1.0'
-end
-
-group :test do
-  gem 'database_cleaner', '>= 0.9.1'
-  gem 'email_spec', '>= 1.4.0'
-  gem 'cucumber-rails', '>= 1.3.0', :require => false
-  gem 'launchy', '>= 2.1.2'
-  gem 'capybara', '>= 2.0.1'
-end
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
