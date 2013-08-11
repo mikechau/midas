@@ -64,4 +64,21 @@ Midas::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+
+  # ActionMailer Config
+  config.action_mailer.default_url_options = { :host => 'rb-trader.com' }
+  # Setup for production - deliveries, no errors raised
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
+  config.action_mailer.smtp_settings = {
+     :authentication => :plain,
+     :address => ENV["EMAIL_HOSTNAME"],
+     :port => 587,
+     :domain => ENV["EMAIL_DOMAIN"],
+     :user_name => ENV["EMAIL_LOGIN"],
+     :password => ENV["EMAIL_PASSWORD"]
+  }
 end
