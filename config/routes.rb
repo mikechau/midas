@@ -7,4 +7,6 @@ Midas::Application.routes.draw do
   devise_for :users
   resources :users
 
+  get '/help', to: 'static_pages#help', as: :help
+
 end

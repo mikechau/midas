@@ -7,10 +7,14 @@
 
 // // CSS Plugins
 @import "font-awesome";
-@import "jquery.fancybox";
-@import "effects";
-@import "flexslider";
-@import "parallax-slider";
+//@import "jquery.fancybox";
+//@import "effects";
+//@import "flexslider";
+//@import "parallax-slider";
 
 // // Themes
 @import "theme-default";
+
+#logo-header {
+  margin-top: -45px;
+}

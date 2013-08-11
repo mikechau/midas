@@ -12,5 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.browser
+//= require modernizr.custom
 //= require bootstrap
-//= require_tree .
+// require jquery.fancybox.pack
+// require jquery-flexslider
+// require modernizr
+// require jquery.cslider
+//= require back-to-top
+//= require app
+//= require custom
+// require_tree .

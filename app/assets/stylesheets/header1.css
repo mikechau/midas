@@ -123,6 +123,7 @@
 /*Header (logo and menu)
 ------------------------------------*/
 .header {
+  padding-top: 25px;
   z-index:999;
   position:relative;
   border-bottom:solid 2px #eee;

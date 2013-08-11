@@ -2,7 +2,9 @@
 <!--[if IE 7]> <html lang="en" class="ie7"> <![endif]-->
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title><%= content_for?(:title) ? yield(:title) : "RBTrader" %></title>
@@ -12,18 +14,28 @@
     <meta name="author" content="www.rb-trader.com">
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
+    <!--[if lt IE 9]><script src="<%= asset_path('respond.js') %>"></script><![endif]-->
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
   </head>
   <body>
 
-    <!--=== Top ===-->    
+    <!--=== Top ===-->
     <div class="top">
-        <div class="container">         
-           <%= render 'layouts/top' %>
-        </div>      
+      <div class="container">
+        <%= render 'layouts/top' %>
+      </div>
     </div><!--/top-->
     <!--=== End Top ===-->
+
+    <!--=== Header ===-->
+    <div class="header">
+      <div class="container">
+        <%= render 'layouts/header_nav' %>
+      </div><!-- /container -->
+    </div><!--/header -->
+    <!--=== End Header ===-->
+
 
               <%= render 'layouts/messages' %>
               <%= yield %>
