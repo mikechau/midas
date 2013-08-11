@@ -1,6 +1,9 @@
 # Add application configuration variables here, as shown below.
-#
 
 SECRET_TOKEN: 'tokenhere'
-GMAIL_USERNAME: email@example.com
-GMAIL_PASSWORD: password
+
+EMAIL_DOMAIN: mail.example.com
+EMAIL_HOSTNAME: smtp.example.org
+EMAIL_LOGIN: username@mail.example.com
+EMAIL_PASSWORD: password
+EMAIL_API_KEY: api-key-example
