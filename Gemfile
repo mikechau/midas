@@ -8,6 +8,7 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'thin'
   gem 'quiet_assets', '>= 1.0.1'
   gem 'better_errors', '>= 0.2.0'
   gem 'binding_of_caller', '>= 0.6.8'

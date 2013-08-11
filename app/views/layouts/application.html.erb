@@ -7,7 +7,7 @@
 <!--<![endif]-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title><%= content_for?(:title) ? yield(:title) : "RBTrader" %></title>
+    <title><%= content_for?(:title) ? yield(:title) + ' - RBTrader' : "RBTrader" %></title>
     <meta name="keywords" content="options, options trading, options scanning, options scanner, options trader, professional trader, stocks, markets quotes, finance stocks, financial markets, stock futures, finance, trading, stock exchange, high frequency trading, futures, options market, financial trends, markets, scalp trade, trading strategies, risk management, trading opportunities, market data, options data, trading analytics" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "RB TECHNOLOGIES is a cutting-edge market data and options scanning software provider, built from the ground up by successful options traders and market professionals." %>">
@@ -36,9 +36,40 @@
     </div><!--/header -->
     <!--=== End Header ===-->
 
+    <!--=== Breadcrumbs ===-->
+    <% if render_breadcrumbs != "" %>
+    <div class="row-fluid breadcrumbs margin-bottom-40">
+      <div class="container">
+        <h1 class="pull-left"><%= content_for?(:title) ? yield(:title) : "RBTrader" %></h1>
+        <span class="pull-right breadcrumb">
+          <%= render_breadcrumbs :separator => ' / ' %>
+        </span>
+        </div><!--/container-->
+    </div><!--/breadcrumbs-->
+    <% end %>
+    <!--=== End Breadcrumbs ===-->
 
-              <%= render 'layouts/messages' %>
-              <%= yield %>
+    <!--=== Content Part ===-->
+    <div class="container">
+      <%= render 'layouts/messages' %>
+      <%= yield %>
+    </div>
+
+    <!--=== Footer ===-->
+    <div class="footer">
+      <div class="container">
+        <%= render 'layouts/footer' %>
+      </div><!--/container--> 
+    </div><!--/footer-->  
+    <!--=== End Footer ===-->
+
+    <!--=== Copyright ===-->
+    <div class="copyright">
+      <div class="container">
+        <%= render 'layouts/copyright' %>
+      </div><!--/container--> 
+    </div><!--/copyright--> 
+    <!--=== End Copyright ===-->
 
   </body>
 </html>
