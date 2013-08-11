@@ -4,6 +4,7 @@ SECRET_TOKEN: 'tokenhere'
 
 EMAIL_DOMAIN: mail.example.com
 EMAIL_HOSTNAME: smtp.example.org
+EMAIL_ADDRESS: noreply@example.com
 EMAIL_LOGIN: username@mail.example.com
 EMAIL_PASSWORD: password
 EMAIL_API_KEY: api-key-example
