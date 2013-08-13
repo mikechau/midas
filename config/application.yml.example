@@ -1,7 +1,12 @@
 # Add application configuration variables here, as shown below.
 
+# Rails Stuff
 SECRET_TOKEN: 'tokenhere'
 
+# Rails Production
+DOMAIN: .domain.com
+
+# EMAIL CONFIG
 EMAIL_DOMAIN: mail.example.com
 EMAIL_HOSTNAME: smtp.example.org
 EMAIL_ADDRESS: noreply@example.com

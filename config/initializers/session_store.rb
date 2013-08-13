@@ -2,6 +2,10 @@
 
 Midas::Application.config.session_store :cookie_store, key: '_midas_session'
 
+if Rails.env == "production"
+  Midas::Application.config.session_store :cookie_store, key: '_midas_session', :domain => ENV["DOMAIN"]
+end
+
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
 # (create the session table with "rails generate session_migration")
