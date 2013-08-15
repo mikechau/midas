@@ -67,7 +67,7 @@ Midas::Application.configure do
 
 
   # ActionMailer Config
-  config.action_mailer.default_url_options = { :host => 'rb-trader.com' }
+  config.action_mailer.default_url_options = { :host => ENV["PRODUCTION_HOST_URL"] }
   # Setup for production - deliveries, no errors raised
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
