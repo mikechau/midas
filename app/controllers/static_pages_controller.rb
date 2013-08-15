@@ -23,4 +23,8 @@ class StaticPagesController < ApplicationController
   def tos
     add_breadcrumb "Terms of Service", :terms_of_service_path
   end
+
+  def coming_soon
+    add_breadcrumb "Coming Soon", :coming_soon_path
+  end
 end

@@ -74,11 +74,9 @@ Midas::Application.configure do
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
   config.action_mailer.smtp_settings = {
-     :authentication => :plain,
-     :address => ENV["EMAIL_HOSTNAME"],
-     :port => 587,
-     :domain => ENV["EMAIL_DOMAIN"],
-     :user_name => ENV["EMAIL_LOGIN"],
-     :password => ENV["EMAIL_PASSWORD"]
+    :address   => "smtp.mandrillapp.com",
+    :port      => 25,
+    :user_name => ENV["EMAIL_USERNAME"],
+    :password  => ENV["EMAIL_API_KEY"]
   }
 end

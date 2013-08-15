@@ -13,6 +13,7 @@ Midas::Application.routes.draw do
   get '/contact', to: 'static_pages#contact', as: :contact
   get '/privacy-policy', to: 'static_pages#privacy', as: :privacy_policy
   get '/terms-of-service', to: 'static_pages#tos', as: :terms_of_service
+  get '/coming-soon', to: 'static_pages#coming_soon', as: :coming_soon
 
   # Marketing Pages Routes
   get '/ticker-plant', to: 'marketing#ticker_plant', as: :ticker_plant

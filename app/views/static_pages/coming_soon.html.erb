@@ -1,0 +1,15 @@
+<% content_for :title do %>Coming soon!<% end %>
+
+<div class="row-fluid">    
+  <div class="coming-soon-plugin">
+    <div id="defaultCountdown"></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        var austDay = new Date(2013, 8, 15);
+        $('#defaultCountdown').countdown({until: austDay});
+        $('#year').text(austDay.getFullYear());
+    });
+</script>
