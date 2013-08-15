@@ -17,4 +17,17 @@ class MarketingController < ApplicationController
     add_breadcrumb "Network", :network_path
   end
 
+  def subscribe
+    sub = Mailchimp.subscribe(params[:email])
+    if sub.nil?
+      redirect_to root_path
+    else
+      redirect_to sign_up_success_path
+    end
+  end
+
+  def sign_up_success
+    add_breadcrumb "Newsletter", :sign_up_success_path
+  end
+
 end

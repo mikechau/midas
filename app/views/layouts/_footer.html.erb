@@ -6,13 +6,13 @@
 
     <!-- Monthly Newsletter -->
     <div class="headline"><h3>Monthly Newsletter</h3></div> 
-    <p>Subscribe to our newsletter and stay up to date with the latest news and deals!</p>
-    <form class="form-inline">
+    <p>Subscribe to our newsletter and stay up to date with the latest news and updates!</p>
+    <%= form_tag subscribe_path, :method => :post, :class => 'form-inline' do %>
       <div class="input-append">
-        <input type="text" placeholder="Email Address" class="input-medium">
-        <button class="btn-u">Subscribe</button>
+        <%= text_field_tag "email", nil, :placeholder => "Email Address", :class => "input-medium", :id => 'txtEmail' %>
+        <%= submit_tag "Subscribe", :class => "btn-u", :id => 'btnValidate' %>
       </div>
-    </form>             
+    <% end %>
   </div><!--/span4--> 
   
   <div class="span4">

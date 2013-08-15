@@ -20,5 +20,7 @@ Midas::Application.routes.draw do
   get '/historical-database', to: 'marketing#historical_db', as: :historical_db
   get '/trade-scanner-viewer', to: 'marketing#trade_scanner_viewer', as: :trade_scanner_viewer
   get '/network', to: 'marketing#network', as: :network
+  post '/subscribe', to: 'marketing#subscribe', as: :subscribe
+  get '/sign-up-success', to: 'marketing#sign_up_success', as: :sign_up_success
 
 end
