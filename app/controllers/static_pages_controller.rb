@@ -16,6 +16,11 @@ class StaticPagesController < ApplicationController
     add_breadcrumb "Contact", :contact_path
   end
 
+  def send_message
+    UserMailer.contact(params[:email], params[:title], params[:message]).deliver
+    redirect_to root_path, :notice => "Message successfully sent!"
+  end
+
   def privacy
     add_breadcrumb "Privacy Policy", :privacy_policy_path
   end

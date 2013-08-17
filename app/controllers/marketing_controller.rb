@@ -18,12 +18,9 @@ class MarketingController < ApplicationController
   end
 
   def subscribe
-    sub = Mailchimp.subscribe(params[:email])
-    if sub.nil?
-      redirect_to root_path
-    else
-      redirect_to sign_up_success_path
-    end
+    Mailchimp.subscribe(params[:email])
+    redirect_to sign_up_success_path
+    # redirect_to root_path, :notice => 'Please check your email to confirm your subscription to the newsletter!'
   end
 
   def sign_up_success

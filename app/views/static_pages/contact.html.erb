@@ -11,15 +11,17 @@
       <div class="headline">
         <h3>Contact Form</h3></div>
         <p>Any questions or concerns? Feel free to send us a message!</p><br />
-        <form>
-          <label>Name</label>
-          <input type="text" class="span7 border-radius-none" />
+
+        <%= form_tag send_message_path, :method => :post do %>
           <label>Email <span class="color-red">*</span></label>
-          <input type="text" class="span7 border-radius-none" />
-          <label>Message</label>
-          <textarea rows="8" class="span10"></textarea>
-          <p><button type="submit" class="btn-u">Send Message</button></p>
-        </form>
+          <%= text_field_tag "email", nil, :placeholder => "Email Address", :class => "span7 border-radius-none" %>
+          <%= label_tag "Subject" %>
+          <%= text_field_tag "title", nil, :placeholder => "Subject", :class => "span7 border-radius-none" %>
+          <%= label_tag "Message" %>
+          <%= text_area_tag 'message', nil, rows: 8, :class => "span10" %>
+          <p><%= submit_tag "Send Message", :class => "btn-u" %></p>
+        <% end %>
+
     </div><!--/span9-->
         
     <div class="span3">
@@ -28,7 +30,7 @@
         <ul class="unstyled who margin-bottom-20">
             <li><i class="icon-home"></i>100 S. Wacker, Chicago, IL 60606</li>
             <li><a href="#"><i class="icon-envelope-alt"></i>marketing@rb-trader.com</a></li>
-            <li><i class="icon-phone-sign"></i>+1 (222) 900-9000</li>
+            <!-- <li><i class="icon-phone-sign"></i>+1 (222) 900-9000</li> -->
             <li><a href="/"><i class="icon-globe"></i>http://www.rb-trader.com</a></li>
         </ul>
 
