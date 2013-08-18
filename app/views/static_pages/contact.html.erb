@@ -2,7 +2,7 @@
 <% content_for :title do %>Contact Us<% end %>
 
 <div style="margin-top:-40px">
-<iframe width="100%" height="352" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=100+S+Wacker+Dr,+Chicago,+IL&amp;aq=0&amp;oq=100+s&amp;sll=41.833733,-87.731964&amp;sspn=0.700896,1.454315&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=100+S+Wacker+Dr,+Chicago,+Cook,+Illinois+60606&amp;ll=41.882486,-87.637146&amp;spn=0.005623,0.030556&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe>
+  <iframe width="100%" height="352" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=100+S+Wacker+Dr,+Chicago,+IL&amp;aq=0&amp;oq=100+s&amp;sll=41.833733,-87.731964&amp;sspn=0.700896,1.454315&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=100+S+Wacker+Dr,+Chicago,+Cook,+Illinois+60606&amp;ll=41.882486,-87.637146&amp;spn=0.005623,0.030556&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe>
 </div>
 
 <div class="container">
@@ -12,16 +12,19 @@
         <h3>Contact Form</h3></div>
         <p>Any questions or concerns? Feel free to send us a message!</p><br />
 
-        <%= form_tag send_message_path, :method => :post do %>
-          <label>Email <span class="color-red">*</span></label>
+        <%= form_tag send_message_path, :method => :post, :id => 'contactForm' do %>
+
+          <%= label_tag "email", "Email:" %>
           <%= text_field_tag "email", nil, :placeholder => "Email Address", :class => "span7 border-radius-none" %>
-          <%= label_tag "Subject" %>
+
+          <%= label_tag "title", "Subject:" %>
           <%= text_field_tag "title", nil, :placeholder => "Subject", :class => "span7 border-radius-none" %>
-          <%= label_tag "Message" %>
-          <%= text_area_tag 'message', nil, rows: 8, :class => "span10" %>
+
+          <%= label_tag "message", "Message:" %>
+          <%= text_area_tag 'message', nil, :placeholder => "...", rows: 8, :class => "span10" %>
+
           <p><%= submit_tag "Send Message", :class => "btn-u" %></p>
         <% end %>
-
     </div><!--/span9-->
         
     <div class="span3">
@@ -53,3 +56,22 @@
     </div><!--/span3-->
   </div><!--/row-fluid-->
 </div>
+
+<script>
+  $(document).ready(function () {
+    $('#contactForm').validate({
+      rules: {
+        email: {
+          required: true,
+          email: true
+        },
+        title: {
+          required: true
+        },
+        message: {
+          required: true
+        }
+      }
+    });
+  });
+</script>

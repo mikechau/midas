@@ -16,6 +16,8 @@
 //= require modernizr.custom
 //= require bootstrap
 //= require jquery.countdown
+//= require jquery.validation
+//= require jquery.validation.additional-methods
 // require jquery.fancybox.pack
 // require jquery-flexslider
 // require modernizr

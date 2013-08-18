@@ -1,0 +1,13 @@
+<div class="row-fluid">    
+  <div class="coming-soon-plugin">
+    <div id="defaultCountdown"></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        var austDay = new Date(<%= year %>, <%= month %>, <%= day %>);
+        $('#defaultCountdown').countdown({until: austDay});
+        $('#year').text(austDay.getFullYear());
+    });
+</script>
