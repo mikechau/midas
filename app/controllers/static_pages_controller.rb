@@ -32,4 +32,8 @@ class StaticPagesController < ApplicationController
   def coming_soon
     add_breadcrumb "Coming Soon", :coming_soon_path
   end
+
+  def dashboard
+    redirect_to ENV["DASHBOARD_URL"]
+  end
 end
