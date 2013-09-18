@@ -26,12 +26,20 @@
         </li>
         <li>
           <%= link_to  '#', :class => 'dropdown-toggle', :'data-toggle' => 'dropdown' do %>
-            Scanners
+            Trading Tools
             <b class="caret"></b>
           <% end %>
           <ul class="dropdown-menu">
             <li><%= link_to 'Live Dashboard Feed', 'dashboard' %></li>
             <li><%= link_to 'Unusual Options Scanner', coming_soon_path %></li>
+            <li class="dropdown-submenu">
+              <%= link_to 'Trade Scanner Viewer', trade_scanner_viewer_path, :tabindex => '-1' %>
+              <ul class="dropdown-menu">
+                <li><%= link_to 'Platform Integration', trade_scanner_viewer_path(:anchor => 'platform-integration') %></li>
+                <li><%= link_to 'Options Quote Board', trade_scanner_viewer_path(:anchor => 'options-quote-board') %></li>
+                <li><%= link_to 'Locked Market / Inversion Scanner', trade_scanner_viewer_path(:anchor => 'locked-market-inversion-scanner') %></li>
+              </ul>
+            </li>
           </ul>
           <b class="caret-out"></b>
         </li>
@@ -43,14 +51,6 @@
           <ul class="dropdown-menu">
             <li><%= link_to 'Ticker Plant', ticker_plant_path %></li>
             <li><%= link_to 'Historical Database', historical_db_path %></li>
-            <li class="dropdown-submenu">
-              <%= link_to 'Trade Scanner Viewer', trade_scanner_viewer_path, :tabindex => '-1' %>
-              <ul class="dropdown-menu">
-                <li><%= link_to 'Platform Integration', trade_scanner_viewer_path(:anchor => 'platform-integration') %></li>
-                <li><%= link_to 'Options Quote Board', trade_scanner_viewer_path(:anchor => 'options-quote-board') %></li>
-                <li><%= link_to 'Locked Market / Inversion Scanner', trade_scanner_viewer_path(:anchor => 'locked-market-inversion-scanner') %></li>
-              </ul>
-            </li>
             <b class="caret-out"></b>
           </ul>
         </li>

@@ -9,6 +9,10 @@ $(document).ready(function(){
     }
   }
 
+  $('#myCarousel').carousel({
+    interval: 2500
+  });
+
   $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
 
   $('#btnValidate').on('click', function(e){

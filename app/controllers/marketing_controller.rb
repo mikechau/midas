@@ -14,7 +14,7 @@ class MarketingController < ApplicationController
   end
 
   def network
-    add_breadcrumb "Network", :network_path
+    add_breadcrumb "Execution Services", :network_path
   end
 
   def subscribe
