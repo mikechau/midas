@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require jquery.browser
 //= require modernizr.custom
-//= require bootstrap
+//= require bootstrap-all.min
 //= require jquery.countdown
 //= require jquery.validation
 //= require jquery.validation.additional-methods
@@ -23,6 +23,6 @@
 // require modernizr
 // require jquery.cslider
 //= require back-to-top
-//= require app
+// require app
 //= require custom
 // require_tree .

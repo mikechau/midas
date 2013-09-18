@@ -33,6 +33,7 @@
             <li><%= link_to 'Live Dashboard Feed', 'dashboard' %></li>
             <li><%= link_to 'Unusual Options Scanner', coming_soon_path %></li>
           </ul>
+          <b class="caret-out"></b>
         </li>
         <li>
           <%= link_to '#', :class => 'dropdown-toggle', :'data-toggle' => 'dropdown' do %>
@@ -50,6 +51,7 @@
                 <li><%= link_to 'Locked Market / Inversion Scanner', trade_scanner_viewer_path(:anchor => 'locked-market-inversion-scanner') %></li>
               </ul>
             </li>
+            <b class="caret-out"></b>
           </ul>
         </li>
         <li>
@@ -61,6 +63,7 @@
             <li><%= link_to 'Trade Servers', network_path(:anchor => 'trade-servers') %></li>
             <li><%= link_to 'FIX Trading', network_path(:anchor => 'fix-trading ') %></li>
           </ul>
+          <b class="caret-out"></b>
         </li>
         <li>
           <%= link_to 'Blog', 'http://rbtrader.tumblr.com/' %>
